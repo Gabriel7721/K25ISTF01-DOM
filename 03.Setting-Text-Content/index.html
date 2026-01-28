@@ -4,12 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Setting-Text-Content</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      button {
+        width: 150px;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <textarea class="story"></textarea>
-      <button id="set-text" type="button">Set text content</button>
+      <button  id="set-text" type="button">Set text content</button>
       <button id="clear-text" type="button">Clear text content</button>
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
