@@ -5,5 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Using DOM</title>
   </head>
-  <body></body>
+  <body>
+    <input type="button" value="Change this document" />
+    <h1>Header</h1>
+    <p>Paragraph</p>
+
+    <script>
+      document.querySelector("input").addEventListener("click", () => {
+        const header = document.getElementsByTagName("h1").item(0);
+        // firstChild element là một text node
+        header.firstChild.data = "A dynamic document";
+        // <h1>A dynamic document</h1>
+        // Truy cập vào trong đoạn văn đầu tiên
+        const para = document.getElementsByTagName("p").item(0);
+        para.firstChild.data = "This is 1st paragraph";
+
+        const newText = document.createTextNode("This is the 2nd paragraph");
+        const newElement = document.createElement("p");
+        newElement.appendChild(newText);
+
+        para.parentNode.appendChild(newElement);
+      });
+    </script>
+  </body>
 </html>
