@@ -18,5 +18,5 @@ paragraph.appendChild(document.createTextNode("Paragraph"));
 
 body.appendChild(paragraph);
 
-html.appendChild(body);
-html.appendChild(head);
+root.appendChild(body);
+root.appendChild(head);
