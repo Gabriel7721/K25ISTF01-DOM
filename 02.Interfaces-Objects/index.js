@@ -1,9 +1,9 @@
 const table = document.getElementById("table");
 
 const tableAttrs = table.attributes;
-const b = "BORDER";
+
 for (const attr of tableAttrs) {
-  if (attr.nodeName === b.toLowerCase()) {
+  if (attr.nodeName === "border") {
     table.border = "5";
   }
 }
